@@ -1,13 +1,13 @@
 .custom-select__control {
-  background-color: transparent !important;
-  border-radius: 10px !important;
-  border: 1px solid #C4C4C4 !important;
   padding: 10px 15px !important;
+  background-color: transparent !important;
+  border: 1px solid #C4C4C4 !important;
+  border-radius: 10px !important;
   box-shadow: none !important;
 }
 
 .custom-select__control--is-focused {
-   border: 1px solid #F2766A !important;
+  border: 1px solid #F2766A !important;
 }
 
 .custom-select__value-container {
@@ -36,21 +36,21 @@
 }
 
 .custom-select__menu {
-  background-color: #FFFFFF !important;
   color: #414141 !important;
+  background-color: #FFFFFF !important;
   animation: scaleIn 0.35s ease-in-out;
 }
 
 .custom-select__option {
-  cursor: pointer !important;
-  color: #2B2B2B !important;
-  background-color: transparent !important;
   padding: 10px !important;
+  color: #2B2B2B !important;
+  font-weight: 500 !important;
+  font-size: 14px !important;
 
   font-family: Gilroy, sans-serif;
-  font-size: 14px !important;
-  font-weight: 500 !important;
   line-height: 20px !important;
+  background-color: transparent !important;
+  cursor: pointer !important;
 }
 
 .custom-select__option:hover {
@@ -59,24 +59,24 @@
 
 
 .custom-select__option--is-selected {
+  position: relative;
   color: #F2766A !important;
   background-color: transparent !important;
-  position: relative;
 }
 
 .custom-select__option--is-selected::after {
   position: absolute;
-  content: '';
-  background-image: url('/public/check.svg');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  top: 50%;
+  right: 20px;
+  bottom: 50%;
   width: 10px;
   height: 10px;
+  background-image: url('/src/assets/check.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
   transform: translate(-50%, -50%);
-  top: 50%;
-  bottom: 50%;
-  right: 20px;
+  content: '';
 }
 
 
@@ -92,15 +92,15 @@
 
 @keyframes scaleIn {
   0% {
-    opacity: 0;
     transform: scale(0.9);
+    opacity: 0;
   }
   50% {
     opacity: 0.3;
   }
   100% {
-    opacity: 1;
     transform: scale(1);
+    opacity: 1;
   }
 }
 
@@ -112,8 +112,8 @@
 }
 
 .custom-select__multi-value__label {
-  font-size: 80% !important;
   color: rgba(255, 255, 255, 0.7) !important;
+  font-size: 80% !important;
 }
 
 .custom-select__multi-value__remove {
@@ -121,7 +121,7 @@
 }
 
 .custom-select__multi-value__remove:hover {
-  background-color: transparent !important;
   color: white !important;
+  background-color: transparent !important;
 }
 

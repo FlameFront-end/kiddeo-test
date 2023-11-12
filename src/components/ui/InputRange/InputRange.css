@@ -1,29 +1,28 @@
 .input-range {
   width: 100%;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  outline: 0;
   height: 2px;
   background-color: #C4C4C4;
+  outline: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
 }
 
 .input-range::-webkit-slider-thumb {
-  -webkit-appearance: none;
   width: 15px;
   height: 15px;
-  border-radius: 50%;
   background-color: #F2766A;
+  border-radius: 50%;
+  -webkit-appearance: none;
 }
 
 .range-bottom {
-  width: 100%;
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+  width: 100%;
   margin-top: 4px;
-
   color: #858585;
-  font-size: 12px;
   font-weight: 500;
+  font-size: 12px;
   line-height: 126.9%;
 }

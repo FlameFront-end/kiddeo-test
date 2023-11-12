@@ -3,8 +3,8 @@ import React, { ReactNode, useEffect, useRef, useState } from 'react'
 import './CustomAccordion.css'
 
 interface AccordionProps {
-  children: ReactNode
-  title: string
+  children?: ReactNode
+  title?: string
   titleClassName?: string
 }
 

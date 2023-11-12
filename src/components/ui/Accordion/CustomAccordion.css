@@ -1,18 +1,18 @@
 .accordion {
+  height: 0;
   overflow: hidden;
   transition: height 0.3s ease;
-  height: 0; /* Set initial height to 0 */
 }
 
 .accordion.open {
   height: auto;
-  transition: height 0.3s ease; /* Add transition for height when accordion opens */
+  transition: height 0.3s ease;
 }
 
 .accordion-header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   cursor: pointer;
 }
 
@@ -27,5 +27,11 @@
 }
 
 .accordion-content {
-  padding-top: 25px;
+  margin-top: 21px;
+}
+
+
+.input-content {
+  display: flex;
+  align-items: center;
 }

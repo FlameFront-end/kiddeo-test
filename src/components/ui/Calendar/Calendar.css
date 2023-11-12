@@ -11,19 +11,19 @@
 }
 
 .react-datepicker__day {
-  border-radius: 50% !important;
   display: inline-flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   width: 23px;
   height: 23px;
   margin: 6px 10px;
+  border-radius: 50% !important;
 }
 
 .react-datepicker__day-names {
   display: flex;
-  justify-content: center;
   gap: 10px;
+  justify-content: center;
   margin: 0;
 }
 
@@ -37,10 +37,10 @@
 }
 
 .react-datepicker__month {
-  border-radius: 5px;
-  background: #FFF;
-  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
   margin: 0;
+  background: #FFF;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.20);
 }
 
 .react-datepicker__triangle {
@@ -57,8 +57,8 @@
 
 .react-datepicker-header {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   margin: 20px 10px;
 }
 
