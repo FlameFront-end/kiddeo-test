@@ -1,0 +1,31 @@
+.accordion {
+  overflow: hidden;
+  transition: height 0.3s ease;
+  height: 0; /* Set initial height to 0 */
+}
+
+.accordion.open {
+  height: auto;
+  transition: height 0.3s ease; /* Add transition for height when accordion opens */
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.arrow-up {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+.arrow-down {
+  transform: rotate(0deg);
+  transition: transform 0.3s ease;
+}
+
+.accordion-content {
+  padding-top: 25px;
+}
