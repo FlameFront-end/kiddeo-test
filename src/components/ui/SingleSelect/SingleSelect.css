@@ -30,6 +30,11 @@
   color: #999aa5 !important;
 }
 
+.custom-select__control--menu-is-open .custom-select__indicator {
+  transform: rotate(180deg);
+  transition: all 0.3s ease-in-out;
+}
+
 .custom-select__menu {
   color: #414141 !important;
   background-color: #FFFFFF !important;
@@ -45,10 +50,6 @@
   line-height: 20px !important;
   background-color: transparent !important;
   cursor: pointer !important;
-}
-
-.custom-select__option:hover:not(.custom-select__option--is-selected) {
-  color: rgb(128, 128, 128) !important;
 }
 
 .custom-select__option--is-selected {
