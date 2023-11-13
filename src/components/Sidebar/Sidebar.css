@@ -8,6 +8,7 @@
 }
 
 .title {
+  color: #2B2B2B;
   margin-bottom: 10px;
   font-weight: 500;
   font-size: 14px;
@@ -56,4 +57,10 @@
 
 .row .item {
   width: 50%;
+}
+
+.gap {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }

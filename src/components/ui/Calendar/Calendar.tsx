@@ -1,10 +1,11 @@
 import { format } from 'date-fns'
 import ru from 'date-fns/locale/ru'
-import React, { useState } from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import DatePicker from 'react-datepicker'
 import { registerLocale, setDefaultLocale } from 'react-datepicker'
 import 'react-datepicker/dist/react-datepicker.css'
 
+import calendar from '../../../assets/calendar.svg'
 import './Calendar.css'
 
 registerLocale('ru', ru)
@@ -16,13 +17,22 @@ interface CalendarProps {
 
 const Calendar: React.FC<CalendarProps> = ({ onDateChange }) => {
   const [startDate, setStartDate] = useState(new Date())
+  const inputRef = useRef<HTMLInputElement | null>(null)
 
-  const formattedMonth = format(startDate, 'LLLL', { locale: ru })
-  const formattedYear = format(startDate, 'yyyy')
+  useEffect(() => {
+    if (inputRef.current) {
+      inputRef.current.value = format(startDate, 'dd.MM.yyyy', { locale: ru })
+    }
+  }, [startDate])
 
   return (
     <DatePicker
-      customInput={<input className="input" />}
+      customInput={
+        <div>
+          <input className="input" ref={inputRef} />
+          <img alt="calendar" className="input-icon" src={calendar} />
+        </div>
+      }
       onChange={(date: Date) => {
         setStartDate(date)
         onDateChange(date)
@@ -37,12 +47,13 @@ const Calendar: React.FC<CalendarProps> = ({ onDateChange }) => {
                   fill="#2B2B2B"
                 />
               </svg>
+              ф
             </svg>
           </button>
 
           <div style={{ flex: 1, fontSize: 16, textAlign: 'center' }}>
-            <span className="react-datepicker-month">{formattedMonth}</span>
-            <span className="react-datepicker-year">{formattedYear}</span>
+            <span className="react-datepicker-month">{format(startDate, 'LLLL', { locale: ru })}</span>
+            <span className="react-datepicker-year">{format(startDate, 'yyyy')}</span>
           </div>
 
           <button disabled={nextMonthButtonDisabled} onClick={() => increaseMonth()}>

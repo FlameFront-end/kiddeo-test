@@ -126,31 +126,33 @@ const Sidebar: React.FC = () => {
       <div className="container">
         <h3 className="heading">Параметры подбора</h3>
         <div className="separator"></div>
-        <div className="item">
-          <div className="title">Дата и время праздника</div>
-          <Calendar onDateChange={handleDateChange} />
-        </div>
-        <div className="row">
+        <div className="gap">
           <div className="item">
-            <div className="title">Начнем в</div>
-            <SingleSelect
-              onSelectChange={handleStartChange}
-              options={['10:00', '11:00', '12:00', '13:00']}
-              placeholder="10:00"
-            />
+            <div className="title">Дата и время праздника</div>
+            <Calendar onDateChange={handleDateChange} />
+          </div>
+          <div className="row">
+            <div className="item">
+              <div className="title">Начнем в</div>
+              <SingleSelect
+                onSelectChange={handleStartChange}
+                options={['10:00', '11:00', '12:00', '13:00']}
+                placeholder="10:00"
+              />
+            </div>
+            <div className="item">
+              <div className="title">Закончим в</div>
+              <SingleSelect
+                onSelectChange={handleFinishChange}
+                options={['15:00', '16:00', '17:00', '18:00']}
+                placeholder="12:00"
+              />
+            </div>
           </div>
           <div className="item">
-            <div className="title">Закончим в</div>
-            <SingleSelect
-              onSelectChange={handleFinishChange}
-              options={['15:00', '16:00', '17:00', '18:00']}
-              placeholder="12:00"
-            />
+            <div className="title">Район</div>
+            <SingleSelect onSelectChange={handleAreaChange} options={areas} placeholder="Любой" />
           </div>
-        </div>
-        <div className="item">
-          <div className="title">Район</div>
-          <SingleSelect onSelectChange={handleAreaChange} options={areas} placeholder="Любой" />
         </div>
 
         <CustomAccordion title="Популярные фильтры" titleClassName="heading">
