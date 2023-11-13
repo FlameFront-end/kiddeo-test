@@ -14,7 +14,7 @@ type InputRangeProps = {
 }
 
 const InputRange: React.FC<InputRangeProps> = ({ onValueChange, parameters }) => {
-  const [value, setValue] = useState<number>(parameters?.state || 0)
+  const [value, setValue] = useState<number>(parameters ? parameters.state : 0)
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const newValue = Number(event.target.value)
