@@ -1,17 +1,20 @@
-interface FilterValue {
+interface FilterValueWithName {
   name: string
   state: boolean
+  values?: { name: string; state: boolean }[]
 }
 
-interface Filter {
-  name: string
-  type: string
-  values: FilterValue[]
+interface FilterValueWithRange {
+  max: number
+  min: number
+  state: number
+  step: number
+  values?: any[]
 }
 
 interface SidebarFilters {
   [key: string]: {
-    [key: string]: Filter
+    [key: string]: FilterValueWithName | FilterValueWithRange
   }
 }
 

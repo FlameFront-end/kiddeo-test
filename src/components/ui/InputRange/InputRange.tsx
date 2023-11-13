@@ -5,7 +5,12 @@ import './InputRange.css'
 
 type InputRangeProps = {
   onValueChange: (value: number) => void
-  parameters?: any
+  parameters?: {
+    max: number
+    min: number
+    state: number
+    step: number
+  }
 }
 
 const InputRange: React.FC<InputRangeProps> = ({ onValueChange, parameters }) => {
@@ -29,7 +34,7 @@ const InputRange: React.FC<InputRangeProps> = ({ onValueChange, parameters }) =>
         value={value}
       />
       <div className="range-bottom">
-        <div>{parameters?.min}</div>
+        <div>{parameters?.min} </div>
         <div>{parameters?.max}</div>
       </div>
     </div>
