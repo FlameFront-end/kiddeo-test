@@ -34,8 +34,8 @@ const InputRange: React.FC<InputRangeProps> = ({ onValueChange, parameters }) =>
         value={value}
       />
       <div className="range-bottom">
-        <div>{parameters?.min} </div>
-        <div>{parameters?.max}</div>
+        <div>{parameters?.min || 1600}</div>
+        <div>{parameters?.max || 3800}</div>
       </div>
     </div>
   )
