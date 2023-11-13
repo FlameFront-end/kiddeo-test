@@ -1,3 +1,7 @@
+.custom-select__control * {
+  padding: 0 !important;
+}
+
 .custom-select__control {
   padding: 10px 15px !important;
   background-color: transparent !important;
@@ -10,21 +14,12 @@
   border: 1px solid #F2766A !important;
 }
 
-.custom-select__value-container {
-  padding: 0 !important;
-  cursor: text !important;
-}
-
 .custom-select__input-container {
   color: #999aa5 !important;
 }
 
 .custom-select__indicator-separator {
   display: none !important;
-}
-
-.custom-select__indicators {
-  cursor: pointer !important;
 }
 
 .custom-select__indicator {
@@ -46,17 +41,15 @@
   color: #2B2B2B !important;
   font-weight: 500 !important;
   font-size: 14px !important;
-
   font-family: Gilroy, sans-serif;
   line-height: 20px !important;
   background-color: transparent !important;
   cursor: pointer !important;
 }
 
-.custom-select__option:hover {
-  background-color: transparent !important;
+.custom-select__option:hover:not(.custom-select__option--is-selected) {
+  color: rgb(128, 128, 128) !important;
 }
-
 
 .custom-select__option--is-selected {
   position: relative;
@@ -79,16 +72,10 @@
   content: '';
 }
 
-
-.custom-select__option:hover:not(.custom-select__option--is-selected) {
-  color: rgb(128, 128, 128) !important;
-}
-
 .custom-select-container > div {
   outline: none !important;
   box-shadow: none !important;
 }
-
 
 @keyframes scaleIn {
   0% {
@@ -103,25 +90,3 @@
     opacity: 1;
   }
 }
-
-/*multi*/
-
-.custom-select__multi-value {
-  background-color: rgba(153, 154, 165, 0.6) !important;
-  border-radius: 0.5rem !important;
-}
-
-.custom-select__multi-value__label {
-  color: rgba(255, 255, 255, 0.7) !important;
-  font-size: 80% !important;
-}
-
-.custom-select__multi-value__remove {
-  color: rgba(255, 255, 255, 0.8) !important;
-}
-
-.custom-select__multi-value__remove:hover {
-  color: white !important;
-  background-color: transparent !important;
-}
-

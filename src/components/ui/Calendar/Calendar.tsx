@@ -22,6 +22,7 @@ const Calendar: React.FC<CalendarProps> = ({ onDateChange }) => {
 
   return (
     <DatePicker
+      customInput={<input className="input" />}
       onChange={(date: Date) => {
         setStartDate(date)
         onDateChange(date)
@@ -40,7 +41,7 @@ const Calendar: React.FC<CalendarProps> = ({ onDateChange }) => {
           </button>
 
           <div style={{ flex: 1, fontSize: 16, textAlign: 'center' }}>
-            <span className="react-datepicker-month">{formattedMonth}</span>{' '}
+            <span className="react-datepicker-month">{formattedMonth}</span>
             <span className="react-datepicker-year">{formattedYear}</span>
           </div>
 
